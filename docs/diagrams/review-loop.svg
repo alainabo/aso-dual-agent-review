@@ -1,0 +1,50 @@
+<svg width="680" viewBox="0 0 680 566" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" role="img">
+<title>How the two-agent review loop works</title>
+<desc>You ask Claude for a change. Claude builds it and writes a proposal into a shared folder. Codex reads the folder and reviews it. If changes are needed it goes back to Claude; if both agree, you merge and ship. Each agent checks the folder and speaks up only when it is your turn.</desc>
+<rect x="1" y="1" width="678" height="564" rx="14" fill="#ffffff" stroke="#e4e4ec"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8a90a0"/></marker></defs>
+
+<line x1="340" y1="75" x2="340" y2="117" stroke="#8a90a0" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="340" y1="175" x2="340" y2="217" stroke="#8a90a0" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="340" y1="275" x2="340" y2="317" stroke="#8a90a0" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="340" y1="375" x2="340" y2="437" stroke="#8a90a0" stroke-width="2" marker-end="url(#ah)"/>
+<text x="352" y="410" font-size="12.5" fill="#12673f">both agree &#10003;</text>
+
+<path d="M240,347 L96,347 L96,147 L240,147" fill="none" stroke="#8a90a0" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ah)"/>
+<text x="108" y="246" font-size="12.5" fill="#a01722">needs</text>
+<text x="108" y="262" font-size="12.5" fill="#a01722">changes</text>
+
+<rect x="240" y="21" width="200" height="54" rx="9" fill="#efeafe" stroke="#7c3aed"/>
+<text x="340" y="46" text-anchor="middle" font-size="15.5" font-weight="600" fill="#4c1d95">You</text>
+<text x="340" y="64" text-anchor="middle" font-size="12" fill="#6b5aa0">ask for a change</text>
+
+<rect x="240" y="121" width="200" height="54" rx="9" fill="#e0ebff" stroke="#2563eb"/>
+<text x="340" y="146" text-anchor="middle" font-size="15.5" font-weight="600" fill="#1e3a8a">Claude</text>
+<text x="340" y="164" text-anchor="middle" font-size="12" fill="#3f5a9a">builds it + writes a proposal</text>
+
+<rect x="240" y="221" width="200" height="54" rx="9" fill="#d3f7ee" stroke="#0d9488"/>
+<text x="340" y="246" text-anchor="middle" font-size="15.5" font-weight="600" fill="#0f5f57">Shared folder</text>
+<text x="340" y="264" text-anchor="middle" font-size="12" fill="#2b7d72">the single source of truth</text>
+
+<rect x="240" y="321" width="200" height="54" rx="9" fill="#e0ebff" stroke="#2563eb"/>
+<text x="340" y="346" text-anchor="middle" font-size="15.5" font-weight="600" fill="#1e3a8a">Codex</text>
+<text x="340" y="364" text-anchor="middle" font-size="12" fill="#3f5a9a">reads it + reviews for real</text>
+
+<rect x="240" y="439" width="200" height="54" rx="9" fill="#efeafe" stroke="#7c3aed"/>
+<text x="340" y="464" text-anchor="middle" font-size="15.5" font-weight="600" fill="#4c1d95">You</text>
+<text x="340" y="482" text-anchor="middle" font-size="12" fill="#6b5aa0">merge &amp; ship it</text>
+
+<line x1="440" y1="248" x2="486" y2="248" stroke="#8a90a0" stroke-width="1.5" stroke-dasharray="4 3"/>
+<rect x="486" y="206" width="188" height="86" rx="9" fill="#fbfbfd" stroke="#d7d9e2"/>
+<text x="500" y="230" font-size="14" font-weight="600" fill="#1e1e2a">The whisper</text>
+<text x="500" y="250" font-size="11.5" fill="#56566a">Open either agent and it</text>
+<text x="500" y="266" font-size="11.5" fill="#56566a">checks this folder &#8212; speaks</text>
+<text x="500" y="282" font-size="11.5" fill="#56566a">up only if it's your turn.</text>
+
+<rect x="150" y="522" width="13" height="13" rx="3" fill="#efeafe" stroke="#7c3aed"/>
+<text x="169" y="533" font-size="11.5" fill="#56566a">You (only you ship)</text>
+<rect x="330" y="522" width="13" height="13" rx="3" fill="#e0ebff" stroke="#2563eb"/>
+<text x="349" y="533" font-size="11.5" fill="#56566a">An AI agent</text>
+<rect x="470" y="522" width="13" height="13" rx="3" fill="#d3f7ee" stroke="#0d9488"/>
+<text x="489" y="533" font-size="11.5" fill="#56566a">Shared folder</text>
+</svg>

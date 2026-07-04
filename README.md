@@ -16,6 +16,12 @@ One agent reviewing its own work has a blind spot: the same reasoning that produ
 
 But naïve two-agent setups turn *you* into the bottleneck: you relay "the other one reviewed," re-explain the protocol every session, and babysit every round-trip.
 
+![Before and after](docs/diagrams/before-after.svg)
+
+**How the loop works** (and [why it's plain files, not n8n or Zapier](docs/why-files-not-workflow-tools.md)):
+
+![The review loop](docs/diagrams/review-loop.svg)
+
 This kit fixes both:
 
 1. **A paper-trail protocol** — proposals, reviews, revisions, and sign-offs live as markdown files in a shared folder. Every decision is auditable.
