@@ -44,6 +44,19 @@ Day-to-day after that:
 
 On the Claude Code side you also get **`/check-reviews`** — one phrase that scans the queue, classifies whose turn it is, and does whatever this agent owes: fix, review, or countersign.
 
+## Do I need to configure Codex (or the second agent)?
+
+**No — nothing inside Codex itself.** No `config.toml` edit, no plugin, no toggle. Setup runs once from **Claude Code** (that's where the skill lives), and it provisions *both* sides by writing plain files. For Codex it writes two:
+
+1. **Codex's operating manual** (`AGENTS.md`) — the review-loop rules, plus a first line telling Codex to run its whisper at session start.
+2. **Codex's whisper script** — the bash file that checks the folder.
+
+Codex reads `AGENTS.md` **automatically** — that's its own native convention — so there is nothing to wire up on the Codex side.
+
+The only prerequisite isn't kit setup, it's just *having* the second agent: **Codex CLI installed and logged into your own account.** Same for any other second agent (Gemini CLI, a second Claude project).
+
+**One honest asymmetry.** On the Claude Code side the whisper is a *hook* — it fires automatically every session, guaranteed by the harness. Codex has no hook system, so it runs its whisper because its manual *tells it to*, the moment you open Codex and send a message. Very reliable in practice; if it ever skips, "run your session-start check" nudges it back. Two agents is the sweet spot precisely because at least one of them (Claude) enforces the check automatically.
+
 ## What gets installed
 
 | Piece | What it does |
